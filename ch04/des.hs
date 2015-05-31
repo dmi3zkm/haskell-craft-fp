@@ -21,7 +21,7 @@ middleNumber x y z
     | otherwise     = z
 
 between :: Integer -> Integer -> Integer -> Bool
-between x y z =  (x <= y) && ( y <= z )
+between x y z =  (x >= y) && ( y >= z )
 
 --exercise 4.3
 howManyEqual :: Integer -> Integer -> Integer -> Integer
