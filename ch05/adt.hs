@@ -19,3 +19,9 @@ isRound :: Shape -> Bool
 isRound (Circle _) = True
 isRound (Rectangle _ _) = False
 isRound (Triangle _ _ _) = False
+
+--exercise 5.8
+isRegular :: Shape -> Bool
+isRegular (Circle _) = True
+isRegular (Rectangle h w) = h == w
+isRegular (Triangle a b c) = a == b && b == c
