@@ -20,3 +20,10 @@ divisors x
 
 isPrime :: Integer -> Bool
 isPrime x = [1,x] == divisors x
+
+--exercise 5.21
+matches :: Integer -> [Integer] -> [Integer]
+matches x ys = [ y | y <- ys, y == x]
+
+isElem :: Integer -> [Integer] -> Bool
+isElem x ys = not $ null $ matches x ys 
