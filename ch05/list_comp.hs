@@ -26,4 +26,11 @@ matches :: Integer -> [Integer] -> [Integer]
 matches x ys = [ y | y <- ys, y == x]
 
 isElem :: Integer -> [Integer] -> Bool
-isElem x ys = not $ null $ matches x ys 
+isElem x ys = not $ null $ matches x ys
+
+--exercise 5.23
+duplicate :: String -> Integer -> String
+duplicate xs n
+    | n == 0    = ""
+    | n == 1    = xs
+    | otherwise = xs ++ duplicate xs (n-1)
