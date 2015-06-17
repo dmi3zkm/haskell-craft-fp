@@ -24,3 +24,7 @@ invertColour pic = [ invertLine line | line <- pic ]
 --exercise 6.4
 superimposeChar :: Char -> Char -> Char
 superimposeChar ch1 ch2 = if ch1 == '.' && ch2 == '.' then '.' else '#'
+
+--exercise 6.5
+superimposeLine :: [Char] -> [Char] -> [Char]
+superimposeLine str1 str2 = [ superimposeChar ch1 ch2 | (ch1, ch2) <- zip str1 str2 ]
