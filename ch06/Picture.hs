@@ -28,3 +28,7 @@ superimposeChar ch1 ch2 = if ch1 == '.' && ch2 == '.' then '.' else '#'
 --exercise 6.5
 superimposeLine :: [Char] -> [Char] -> [Char]
 superimposeLine str1 str2 = [ superimposeChar ch1 ch2 | (ch1, ch2) <- zip str1 str2 ]
+
+--exercise 6.6
+superimpose :: Picture -> Picture -> Picture
+superimpose pic1 pic2 = [ superimposeLine line1 line2 | (line1, line2) <- zip pic1 pic2 ]
