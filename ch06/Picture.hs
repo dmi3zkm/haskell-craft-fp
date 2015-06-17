@@ -20,3 +20,7 @@ invertLine line = [ invertChar ch | ch <- line ]
 
 invertColour :: Picture -> Picture
 invertColour pic = [ invertLine line | line <- pic ]
+
+--exercise 6.4
+superimposeChar :: Char -> Char -> Char
+superimposeChar ch1 ch2 = if ch1 == '.' && ch2 == '.' then '.' else '#'
